@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Integration Tests</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .summary {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .summary.all-passed {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .summary.has-failures {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .test-suite {
+            margin: 20px 0;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .test-suite-header {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .test-case {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .test-case:last-child {
+            border-bottom: none;
+        }
+
+        .test-case.passed {
+            background: #d4edda;
+        }
+
+        .test-case.failed {
+            background: #f8d7da;
+        }
+
+        .test-name {
+            flex: 1;
+        }
+
+        .test-status {
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+
+        .test-status.passed {
+            background: #28a745;
+            color: white;
+        }
+
+        .test-status.failed {
+            background: #dc3545;
+            color: white;
+        }
+
+        .test-error {
+            margin-top: 10px;
+            padding: 10px;
+            background: #fff;
+            border-left: 3px solid #dc3545;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: #721c24;
+        }
+
+        .test-details {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Tic Tac Toe Integration Tests</h1>
+        <p>Testing game logic with disappearing moves mechanic</p>
+        
+        <div id="summary" class="summary"></div>
+        <div id="test-results"></div>
+        <button id="run-tests">Run Tests Again</button>
+    </div>
+
+    <script src="game-testable.js"></script>
+    <script src="tests.js"></script>
+</body>
+</html>

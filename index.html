@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Disappearing Moves</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <h2 class="subtitle" id="game-mode-subtitle">Every 3rd move erases the move from 3 turns ago!</h2>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" id="mode-classic">Classic Mode</button>
+            <button class="mode-btn" id="mode-alternate">3-Symbol Mode</button>
+        </div>
+        
+        <div class="game-info">
+            <div class="player-turn">
+                Current Player: <span id="current-player">X</span>
+            </div>
+            <div class="move-counter">
+                Move Count: <span id="move-count">0</span>
+            </div>
+        </div>
+
+        <div class="warning-message" id="warning-message"></div>
+
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="game-status" id="game-status"></div>
+
+        <button class="reset-btn" id="reset-btn">New Game</button>
+
+        <div class="move-history">
+            <h3>Move History</h3>
+            <div id="history-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
